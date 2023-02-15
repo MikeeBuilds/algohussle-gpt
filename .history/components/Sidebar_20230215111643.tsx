@@ -24,7 +24,7 @@ function SideBar() {
 
       {session && (
           <img 
-          onClick={() => signOut()}
+          
           src={session.user?.image!} 
           alt="Profile Pic"
           className="h-12 w-12 rounded-full cursor-pointer mx-auto mb-2
