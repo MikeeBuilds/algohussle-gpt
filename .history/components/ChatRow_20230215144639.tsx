@@ -2,7 +2,6 @@ import { ChatBubbleLeftIcon, TrashIcon } from "@heroicons/react/24/outline";
 import { useSession } from "next-auth/react";
 import Link from 'next/link';
 import { usePathname, useRouter } from "next/navigation";
-import { useState } from "react";
 
 
 type Props = {
