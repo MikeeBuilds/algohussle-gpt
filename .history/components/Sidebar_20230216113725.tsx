@@ -1,6 +1,6 @@
 "use client";
 
-import { collection, orderBy, query } from "firebase/firestore";
+import { collection, query } from "firebase/firestore";
 import { useSession, signOut } from "next-auth/react";
 import { useCollection } from 'react-firebase-hooks/firestore';
 import { db } from "../firebase";

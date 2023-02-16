@@ -18,10 +18,10 @@ function ChatRow({id}: Props) {
     const { data: session } = useSession(); 
     const [active, setActive] = useState(false);
 
-    const [messages] = useCollection(       
+    const [messages] = useCollection(
         collection(db, 'users', session?.user?.email!,
         'chats', id, 'messages')
-        );
+    );
 
     useEffect(() => {
         if (!pathname) return;

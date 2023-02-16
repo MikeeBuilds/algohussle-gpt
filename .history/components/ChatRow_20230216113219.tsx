@@ -1,5 +1,5 @@
 import { ChatBubbleLeftIcon, TrashIcon } from "@heroicons/react/24/outline";
-import { collection, deleteDoc, doc } from "firebase/firestore";
+import { collection, deleteDoc, doc, orderBy, query } from "firebase/firestore";
 import { useSession } from "next-auth/react";
 import Link from 'next/link';
 import { usePathname, useRouter } from "next/navigation";
@@ -18,10 +18,13 @@ function ChatRow({id}: Props) {
     const { data: session } = useSession(); 
     const [active, setActive] = useState(false);
 
-    const [messages] = useCollection(       
+    const [messages] = useCollection(
+        query(
         collection(db, 'users', session?.user?.email!,
-        'chats', id, 'messages')
-        );
+        'chats', id, 'messages'), 
+        orderBy("createdAt")
+        )
+    );
 
     useEffect(() => {
         if (!pathname) return;
