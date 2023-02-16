@@ -4,8 +4,8 @@ import ChatInput from "../../../components/ChatInput";
 type Props = {
     params: {
         id: string 
-    };
-};
+    }
+}
 
 function ChatPage({params: {id}}: Props) {
 
@@ -14,7 +14,7 @@ function ChatPage({params: {id}}: Props) {
             <Chat chatId={id} />
             <ChatInput chatId={id} />
         </div>
-    );
+    )
 }
 
 export default ChatPage;

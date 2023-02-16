@@ -14,7 +14,7 @@ function ChatPage({params: {id}}: Props) {
             <Chat chatId={id} />
             <ChatInput chatId={id} />
         </div>
-    );
+    )
 }
 
 export default ChatPage;
