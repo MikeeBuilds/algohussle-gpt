@@ -24,9 +24,8 @@ function ChatInput({ chatId }: Props) {
             text: input,
             createdAt: serverTimestamp(),
             user: {
-                _id: session?.user?.email!,
-                name: session?.user?.name!,
-                avatar: session?.user?.image! || "https://ui-avatars.com/api/?name=${session?.user?.name}",
+                _id: session?.user.email!,
+                name: session?.user
             }
         }
     };
